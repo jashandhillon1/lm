@@ -19,8 +19,8 @@ def loginUser(request):
     page = 'login'
     user_auth = None
     #
-    if request.user.is_authenticated:
-        return redirect('homepage')
+    # if request.user.is_authenticated:
+    #     return redirect('homepage')
     print("hello")
     if request.method == 'POST':
         username = request.POST['username'].lower()

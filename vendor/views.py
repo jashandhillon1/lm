@@ -55,9 +55,10 @@ def createVendor(request):
             user = form.save(commit=False)
             user.username = user.username.lower()
             user.save()
+            messages.success(request, 'Vendor created successfully!')
 
-            login(request, user)
-            print(user)
+            # login(request, user)
+            # print(user)
             return redirect("loginVendor")
         else:
             messages.error(request, 'an error has occured while login')
